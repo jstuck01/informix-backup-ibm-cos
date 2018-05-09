@@ -1,0 +1,12 @@
+# eclipse project file
+.settings/
+.classpath
+.project
+
+
+/config.props
+/config.props.INFORMIX
+/dependency-reduced-pom.xml
+/moon.jpeg
+/uploadTest.txt
+/target/
