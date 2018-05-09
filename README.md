@@ -9,7 +9,7 @@ Config Variable | Example Value | Description | Required
 ----------------|---------------|-------------|----------
 BUCKET_NAME  |  mybucket  |  The name of the IBM Cloud Object Storage bucket  | YES
 API_KEY  | cMJD73pkjfglb3skum96SxlrrZYlnEGSn-tE3i_cr7xY  |  The value of "apikey" from the service credentials  |  YES
-SERVICE_INSTANCE_ID  |  crn:v1:bluemix:public:cloud-object-storage:global:a/a676d937cb32f5111afcc3f7d747d2bb:a16096e2-4583-4d7f-8bd5-e6a4f1bc193b::  |  The value of "resource_instance_id" from the service credentials  |  YES
+SERVICE_INSTANCE_ID  |  crn:v1:bluemix:public:cloud-object-storage:global:a/a676d937c:a160-4583-4d7f-8bd5-e6a93b::  |  The value of "resource_instance_id" from the service credentials  |  YES
 SERVICE_ENDPOINT  |  s3-api.us-geo.objectstorage.softlayer.net  |  Default value should not need to be changed  |  YES
 LOCATION  |  US  | The geo location for the cloud object storage location  |  YES
 IAM_ENDPOINT  | https://iam.bluemix.net/oidc/token  |  Default value should not have to be changed  |  YES
