@@ -1,10 +1,10 @@
 # informix-backup-ibm-cos
 Informix-Backup-IBM-COS is a utility that works with Informix onbar backups that leverage STDIO.  This utility communicates with Informix STDIO to stream backup data to the IBM Cloud Object Store.  In addition, restore operations will result in the object being retrieved and streamed to Informix STDIO.  
 
-##Getting Started
+## Getting Started
 Pull the repository and execute maven to build the project.  (e,g,:  mvn package)  This will result in the distribution being created as a compresses file.  Decompress the file, and un-tar the artifact.
 
-##Configuration
+## Configuration
 Config Variable | Example Value | Description | Required
 ----------------|---------------|-------------|----------
 BUCKET_NAME  |  mybucket  |  The name of the IBM Cloud Object Storage bucket  | YES
