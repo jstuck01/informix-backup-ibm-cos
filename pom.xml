@@ -4,6 +4,9 @@
   <artifactId>informix-backup-ibm-cos</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>informix-backup-ibm-cos</name>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   <dependencies>
 	 	<dependency>
 	        <groupId>com.ibm.cos</groupId>
