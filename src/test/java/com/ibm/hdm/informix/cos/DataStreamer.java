@@ -7,7 +7,7 @@ import org.apache.commons.io.IOUtils;
 
 /*
  * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
@@ -20,8 +20,8 @@ import org.apache.commons.io.IOUtils;
  */
 
 /**
- * DataStreamer streams the contents of a file as a 
- * binary stream to the output stream passed to it.
+ * DataStreamer streams the contents of a file as a binary stream to the output
+ * stream passed to it.
  */
 public class DataStreamer {
 	/**
@@ -31,17 +31,20 @@ public class DataStreamer {
 
 	/**
 	 * Default constructor.
-	 * @param fileName is the name of the file to be streamed.
+	 * 
+	 * @param fileName
+	 *            is the name of the file to be streamed.
 	 */
 	public DataStreamer(String fileName) {
 		super();
 		this.fileName = fileName;
 	}
-	
-	
+
 	/**
 	 * Streams the file to the output stream passed to it.
-	 * @param outputStream is the stream used for output.
+	 * 
+	 * @param outputStream
+	 *            is the stream used for output.
 	 */
 	public void stream(OutputStream outputStream) {
 		try {
@@ -50,6 +53,6 @@ public class DataStreamer {
 			fileInputStream.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-		} 
+		}
 	}
 }
