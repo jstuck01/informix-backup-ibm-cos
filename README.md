@@ -15,5 +15,11 @@ LOCATION  |  US  | The geo location for the cloud object storage location  |  YE
 IAM_ENDPOINT  | https://iam.bluemix.net/oidc/token  |  Default value should not have to be changed  |  YES
 CLIENT_TIMEOUT  |  50000  |  The S3 client timeout value.  |  YES
 
+## Informix Configuration
+InformixCOS needs to be registered with the Informix PSM.  After placing InformixCOS on the server, use the following command to register PSM.
+
+	onpsm -D add /home/informix/demo/BAR/PSM/STDIO/InformixCOS/run.sh -t STDIO -g DBSPOOL --write_arg "BACKUP @obj_name1@.@obj_id@.@obj_part@" --read_arg "RESTORE @obj_name1@.@obj_id@.@obj_part@" --drop_arg "DELETE @obj_name1@.@obj_id@.@obj_part@"
+	
+After PSM registration, use onbar to execute Informix backup and restore operations and InformixCOS will automatically upload and retrieve your backups.  
 
 
