@@ -44,9 +44,11 @@ CLIENT_TIMEOUT  |  50000  |  The S3 client timeout value.  |  YES
 InformixCOS needs to be registered with the Informix Primary Storage Manager (PSM).  After placing InformixCOS on the server, use the following command to register it with PSM.
 
 **DBSPOOL Registration**
+
 	onpsm -D add /home/informix/demo/BAR/PSM/STDIO/InformixCOS/run.sh -t STDIO -g DBSPOOL --write_arg "BACKUP @obj_name1@.@obj_id@.@obj_part@" --read_arg "RESTORE @obj_name1@.@obj_id@.@obj_part@" --drop_arg "DELETE @obj_name1@.@obj_id@.@obj_part@"
 
 **LOGPOOL Registration**
+
 	onpsm -D add /home/informix/demo/BAR/PSM/STDIO/InformixCOS/run.sh -t STDIO -g LOGPOOL -p HIGHEST  --write_arg "BACKUP @obj_name1@.@obj_id@.@obj_part@" --read_arg "RESTORE @obj_name1@.@obj_id@.@obj_part@" --drop_arg "DELETE @obj_name1@.@obj_id@.@obj_part@"
 	
 After PSM registration is completed, use onbar to execute Informix backup and restore operations and InformixCOS will automatically store and retrieve your backups to and from IBM Cloud Object Storage. 
