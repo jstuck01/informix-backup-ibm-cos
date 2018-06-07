@@ -9,7 +9,9 @@ Full support for Informix Backup and Restore function is available as follows:
 * point in log restore
 * Informix based encrypted backup and restore
 
-Simply use Backup and Restore (BAR) functions as you would with any other registered device with the Primary Storage Manager.   
+Simply use Backup and Restore (BAR) functions as you would with any other registered device with the Primary Storage Manager. 
+
+In addition, any backup objects which are deleted from the Primary Storage Manager will result in the object being removed from the IBM Cloud Object Storage repository.  This provides seamless management of all backup objects on the cloud from within the Informix environment.  
 
 ## Getting Started
 Pull the repository and execute maven to build the project.  (e,g,:  mvn package)  This will result in the distribution being created as a compressed file.  Decompress the file to access the artifacts.  Distribution packages are created as TAR and ZIP archives. 
