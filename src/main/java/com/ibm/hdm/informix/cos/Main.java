@@ -57,7 +57,7 @@ public final class Main {
 			logger.info("Restore operation initiated");
 			cos.restoreStream(filename);
 			logger.info("Restore operation completed");
-		} else if (operation.toLowerCase().equals("drop")) {
+		} else if (operation.toLowerCase().equals("delete")) {
 			logger.info("Drop operation initiated");
 			cos.drop(filename);
 			logger.info("Drop operation completed");
