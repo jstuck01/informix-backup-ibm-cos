@@ -4,7 +4,7 @@ The Informix-Backup-IBM-COS project enables backing up Informix databases to IBM
 Full support for Informix Backup and Restore function is available as follows:
 * full level 0 backups 
 * incremental level 1 and 2 backups
-* full restore operations from the last backup
+* full restore operations from last backup
 * point in time restore 
 * point in log restore
 * Informix based encrypted backup and restore
@@ -17,6 +17,7 @@ Pull the repository and execute maven to build the project.  (e,g,:  mvn package
 NOTE:  Primary testing has been completed on Linux.
 
 **Building for Linux**
+
 Pull the repository and execute a maven build.  (e.g.:  mvn package).  This will result in a compressed tar file.  Simply decompress the file (e.g.:  gunzip InformixCOS-bin.tar.gz) and then extract the contents of the archive.  (e.g.:  tar -xvf InformixCOS-bin.tar).  Once expanded, you will see the following files:
 
 * config.props (Required configuration file)
