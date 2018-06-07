@@ -164,7 +164,8 @@ public class COSClient {
 			InitiateMultipartUploadResult initResult = _s3Client.initiateMultipartUpload(initRequest);
 			ArrayList<PartETag> partETags = new ArrayList<PartETag>();
 			long bytesRead = 0;
-			int partSize = 5 * 1024 * 1024;
+			long totalBytesRead = 0;
+			int partSize = 100 * 1024 * 1024;
 			byte[] part = new byte[partSize];
 			int partNumber = 1;
 			logger.info("Reading stream...");
@@ -182,10 +183,12 @@ public class COSClient {
 				UploadPartResult uploadPartResult = _s3Client.uploadPart(uploadRequest);
 				partETags.add(uploadPartResult.getPartETag());
 				logger.info("Uploading part complete!");
+				totalBytesRead = totalBytesRead + bytesRead;
 				partNumber++;
 				bytesRead = 0;
 			}
 			logger.info("Done reading stream.");
+			logger.info("Total Bytes Uploaded: " + totalBytesRead);
 			logger.info("Completing multipart upload...");
 			CompleteMultipartUploadRequest completeRequest = new CompleteMultipartUploadRequest(this.bucketName,
 					objectKey, initResult.getUploadId(), partETags);
