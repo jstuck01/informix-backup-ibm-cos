@@ -1,5 +1,7 @@
 # informix-backup-ibm-cos
-The Informix-Backup-IBM-COS project enables backing up Informix databases to IBM Cloud Object Storage leveraging S3 storage protocols.  The utility is simple to use, and once configured, requires only knowledge of Informix backup and restore operations.  It leverages the Backup and Restore (BAR) function with STDIO features of Informix and provides a seamless bridge to IBM Cloud Object Storage.  Both log files and data files can be configured for backup and restore operations.
+The Informix-Backup-IBM-COS project enables backing up Informix databases to IBM Cloud Object Storage leveraging S3 storage protocols.  The utility is simple to use, and once configured, requires only knowledge of Informix backup and restore operations.  The utility simply acts as a pipline to direct backup and restore streams to and from the cloud.
+
+The Utility leverages the Backup and Restore (BAR) function with STDIO features of Informix and provides a seamless bridge to IBM Cloud Object Storage.  Both log files and data files can be configured for backup and restore operations.
 
 Full support for Informix Backup and Restore function is available as follows:
 * full level 0 backups 
@@ -9,9 +11,9 @@ Full support for Informix Backup and Restore function is available as follows:
 * point in log restore
 * Informix based encrypted backup and restore
 
-Simply use Backup and Restore (BAR) functions as you would with any other registered device with the Primary Storage Manager. 
+Simply use Backup and Restore (BAR) functions as you would with any other device registered with the Primary Storage Manager. 
 
-In addition, any backup objects which are deleted from the Primary Storage Manager will result in the object being removed from the IBM Cloud Object Storage repository.  This provides seamless management of all backup objects on the cloud from within the Informix environment.  
+In addition to the BAR functions provided, any backup objects which are deleted from the Primary Storage Manager will result in those same objects from being deleted from the IBM Cloud Object Storage repository.  This provides seamless end to end management of all backup objects on the cloud from directly within the Informix environment.  
 
 ## Getting Started
 Pull the repository and execute maven to build the project.  (e,g,:  mvn package)  This will result in the distribution being created as a compressed file.  Decompress the file to access the artifacts.  Distribution packages are created as TAR and ZIP archives. 
